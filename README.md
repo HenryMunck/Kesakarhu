@@ -1,0 +1,5 @@
+- 👋 Hi, I’m Henry Munck. I'm a 32 years old air ventilation install worker.
+- 👀 I’m interested in ... learning how to program and code. 
+- 🌱 I’m currently learning ... Python, javascript and some SQL.
+- 💞️ I’m looking to collaborate on ... anything that helps me on my way to become a real computer Nerd =D
+- 📫 How to reach me ... by email, and thats henrymunck@gmail.com.
