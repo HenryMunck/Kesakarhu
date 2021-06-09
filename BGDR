@@ -1,0 +1,71 @@
+import random
+from tkinter import*
+
+root = Tk()
+root.title("BGDR")
+
+Dice = 20
+
+def score4():
+    number.delete(0, END)
+    number.insert(0, four)
+
+
+def score20():
+    number.delete(0, END)
+    num20 = print(random.randrange(1, 20))
+    number.insert(0, num20)
+
+def twenty():
+    print("20")
+
+def twelve():
+    print(random.randrange(1, 12))
+
+def ten():
+    print(random.randrange(1, 10))
+
+def eight():
+    print(random.randrange(1, 8))
+
+def six():
+    print(random.randrange(1, 6))
+
+def four():
+    return (random.randrange(1, 4))
+
+number = Entry(root, width=30, borderwidth=0)
+dice20 = Button(root, text="Dice20", command=score20, padx=30, pady=30)
+dice12 = Button(root, text="Dice12", command=twelve, padx=30, pady=30)
+dice10 = Button(root, text="Dice10", command=ten, padx=30, pady=30)
+dice8 = Button(root, text="Dice8", command=eight, padx=30, pady=30)
+dice6 = Button(root, text="Dice6", command=six, padx=30, pady=30)
+dice4 = Button(root, text="Dice4", command=score4, padx=30, pady=30)
+
+number.insert(0, "Dice Roll Number Here...")
+
+number.grid(row=0, column=1, columnspan=4, pady=50)
+dice20.grid(row=1, column=0)
+dice12.grid(row=1, column=1)
+dice10.grid(row=1, column=2)
+dice8.grid(row=1, column=3)
+dice6.grid(row=1, column=4)
+dice4.grid(row=1, column=5)
+
+root.mainloop()
+
+# Without GUI version
+
+def Diceroller():
+    while Dice == 20:
+        Diceroll = input("Enter Dice number: ")
+        if Diceroll == str(20):
+            print(random.randrange(1, 20))
+        elif Diceroll == str(8):
+            print(random.randrange(1, 8))
+        elif Diceroll == str(6):
+            print(random.randrange(1, 6))
+        elif Diceroll == str(4):
+            print(random.randrange(1, 4))
+        else:
+            print("Error! Pleace choose one of these numbers: 4, 6, 8 or 20.")
