@@ -1,3 +1,7 @@
+# BGDR = BoardGameDiceRoller
+# From Dice sizes 4 to 20
+# tkinter GUI
+
 import random
 from tkinter import*
 
