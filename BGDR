@@ -3,47 +3,57 @@ from tkinter import*
 
 root = Tk()
 root.title("BGDR")
+root.iconbitmap("Diceicon.ico")
+root.configure(background="white")
 
 Dice = 20
 
 def score4():
+    Dlist = Label(root)
     number.delete(0, END)
-    number.insert(0, four)
+    num20 = random.randrange(1, 5)
+    number.insert(0, num20)
+
+
+def score6():
+    number.delete(0, END)
+    num20 = random.randrange(1, 7)
+    number.insert(0, num20)
+
+def score8():
+    number.delete(0, END)
+    num20 = random.randrange(1, 9)
+    number.insert(0, num20)
+
+def score10():
+    number.delete(0, END)
+    num20 = random.randrange(1, 11)
+    number.insert(0, num20)
+
+def score12():
+    number.delete(0, END)
+    num20 = random.randrange(1, 13)
+    number.insert(0, num20)
 
 
 def score20():
     number.delete(0, END)
-    num20 = print(random.randrange(1, 20))
+    num20 = random.randrange(1, 21)
     number.insert(0, num20)
 
-def twenty():
-    print("20")
 
-def twelve():
-    print(random.randrange(1, 12))
-
-def ten():
-    print(random.randrange(1, 10))
-
-def eight():
-    print(random.randrange(1, 8))
-
-def six():
-    print(random.randrange(1, 6))
-
-def four():
-    return (random.randrange(1, 4))
-
+#Dlist = Canvas(root, bd=200, bg="White")
 number = Entry(root, width=30, borderwidth=0)
-dice20 = Button(root, text="Dice20", command=score20, padx=30, pady=30)
-dice12 = Button(root, text="Dice12", command=twelve, padx=30, pady=30)
-dice10 = Button(root, text="Dice10", command=ten, padx=30, pady=30)
-dice8 = Button(root, text="Dice8", command=eight, padx=30, pady=30)
-dice6 = Button(root, text="Dice6", command=six, padx=30, pady=30)
-dice4 = Button(root, text="Dice4", command=score4, padx=30, pady=30)
+dice20 = Button(root, text="Dice20", command=score20, padx=15, pady=15)
+dice12 = Button(root, text="Dice12", command=score12, padx=15, pady=15)
+dice10 = Button(root, text="Dice10", command=score10, padx=15, pady=15)
+dice8 = Button(root, text="Dice8", command=score8, padx=15, pady=15)
+dice6 = Button(root, text="Dice6", command=score6, padx=15, pady=15)
+dice4 = Button(root, text="Dice4", command=score4, padx=15, pady=15)
 
 number.insert(0, "Dice Roll Number Here...")
 
+#Dlist.grid(row=0, column=6)
 number.grid(row=0, column=1, columnspan=4, pady=50)
 dice20.grid(row=1, column=0)
 dice12.grid(row=1, column=1)
